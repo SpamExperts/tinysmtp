@@ -10,12 +10,12 @@ import envparse
 
 env = envparse.Env(
     TINYSMTP_SERVER=str,
-    TINYSMTP_PORT=(int, 25),
+    TINYSMTP_PORT=dict(cast=int, default=25),
     TINYSMTP_USERNAME=str,
     TINYSMTP_PASSWORD=str,
-    TINYSMTP_SSL=(bool, False),
-    TINYSMTP_TLS=(bool, False),
-    TINYSMTP_DEBUG=(bool, False)
+    TINYSMTP_SSL=dict(cast=bool, default=False),
+    TINYSMTP_TLS=dict(cast=bool, default=False),
+    TINYSMTP_DEBUG=dict(cast=bool, default=False)
 )
 
 
